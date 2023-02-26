@@ -2,6 +2,15 @@ import React, { Component } from 'react'
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView } from 'react-native'
 
 export default class LoginPage extends Component {
+
+constructor(props){
+  super(props)
+  this.state={
+    username:"",
+    password:""
+  }
+}
+
   render() {
     return (
       <View style={Mystyle.main}>
@@ -15,10 +24,20 @@ export default class LoginPage extends Component {
       <TextInput style={Mystyle.input}
       autoCapitalize
       autoCorrect={true}
-      placeholder='Username' />
+      placeholder='Username'
+      value={this.state.username}
+      onChange={(username)=>{
+        this.setState({username})}
+      }
+      />
       <TextInput style={Mystyle.input}
       secureTextEntry={true}
-      placeholder='Password' />
+      placeholder='Password' 
+      value={this.state.password}
+      onChange={(password)=>{
+        this.setState({password})}
+      }
+      />
      
       
       
