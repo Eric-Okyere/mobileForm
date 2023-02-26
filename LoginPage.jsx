@@ -33,6 +33,7 @@ constructor(props){
       <TextInput style={Mystyle.input}
       secureTextEntry={true}
       placeholder='Password' 
+      
       value={this.state.password}
       onChange={(password)=>{
         this.setState({password})}
